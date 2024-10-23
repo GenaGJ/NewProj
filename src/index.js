@@ -10,10 +10,11 @@ const calculator = new Calculator();
 
 rl.question('Введите пример : ', (input) => {
   try {
+   
     const result = calculator.evaluate(input);
     console.log(`Результат : ${result}`);
   } catch (err) {
-    console.log('Error: Недопустимое выражение');
+   console.log(err)
   }
   rl.close();
 });

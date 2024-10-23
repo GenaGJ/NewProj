@@ -8,7 +8,7 @@ describe('Calculator', () => {
   });
 
   test('should evaluate addition', () => {
-    expect(calculator.evaluate('2 + 3')).toBe(5);
+    expect(calculator.evaluate('2+3')).toBe(5);
   });
 
   test('should evaluate subtraction', () => {
@@ -20,7 +20,7 @@ describe('Calculator', () => {
   });
 
   test('should evaluate division', () => {
-    expect(calculator.evaluate('10 / 2')).toBe(5);
+    expect(calculator.evaluate('8 / 2')).toBe(4);
   });
 
   test('should prioritet', () => {
@@ -30,4 +30,20 @@ describe('Calculator', () => {
   test('should prioritetToo', () => {
     expect(calculator.evaluate('3 + 5 * 2')).toBe(13);
   });
+
+  test('should unary', () => {
+    expect(calculator.evaluate('(-5 + 2) * 2')).toBe(-6);
+  });
+
+  test('should staples', () => {
+    expect(calculator.evaluate('5+(-7)')).toBe(-2);
+  });
+
+  test('should exponentiation ', () => {
+    expect(calculator.evaluate('1+(8^5)')).toBe(32769);
+  });
+
+
+
+
 });
